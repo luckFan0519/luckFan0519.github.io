@@ -1,0 +1,18 @@
+# Jekyll site settings
+title: "江帆的个人主页"
+description: "信息学院 | 创新实验"
+baseurl: ""
+url: "https://luckFan0519.github.io"
+theme: minima
+markdown: kramdown
+
+# Navigation
+header_pages:
+  - skills.md
+  - projects.md
+  - about.md
+
+# Author info
+author:
+  name: 江帆
+  email: luckFan0519@users.noreply.github.com
