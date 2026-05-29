@@ -1,0 +1,113 @@
+---
+layout: default
+---
+{% assign profile = site.data.profile %}
+
+<section class="hero section" style="--hero-image: url('{{ "/assets/images/hero-bg.png" | relative_url }}');">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="eyebrow">信息学院 · Innovation & Technology</div>
+    <h1 data-text="{{ profile.name }}">{{ profile.name }}</h1>
+    <p class="hero-role">{{ profile.role }}</p>
+    <p class="hero-slogan">{{ profile.slogan }}</p>
+    <div class="terminal-line" aria-label="动态状态">
+      <span>~/portfolio</span>
+      <code id="typing-line">initializing dev blog...</code>
+    </div>
+    <div class="hero-actions">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn ghost" href="#about">About Me</a>
+      <a class="btn ghost" href="{{ profile.contact.github }}" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+    <div class="hero-stats">
+      <span><strong>3</strong> Featured Projects</span>
+      <span><strong>5</strong> Skill Domains</span>
+      <span><strong>4</strong> Dev Tools</span>
+    </div>
+  </div>
+  <div class="hero-portrait tilt-card" data-glass>
+    <div class="avatar-placeholder">
+      <span>JF</span>
+    </div>
+    <div>
+      <span class="status-dot"></span>
+      <strong>Available for project collaboration</strong>
+      <p>小程序 · 数据挖掘 · Flutter · Python</p>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section content-grid">
+  <div class="section-heading">
+    <span class="eyebrow">About Me</span>
+    <h2>从需求出发，把技术做成作品</h2>
+  </div>
+  <div class="glass-panel about-card reveal tilt-card">
+    <p>{{ profile.bio }}</p>
+    <div class="meta-grid">
+      <div><span>School</span><strong>{{ profile.school }}</strong></div>
+      <div><span>Focus</span><strong>Mini Program · Data Mining · Flutter</strong></div>
+    </div>
+  </div>
+  <div class="interest-list">
+    {% for interest in profile.interests %}
+    <span>{{ interest }}</span>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <div class="section-heading center">
+    <span class="eyebrow">Skills</span>
+    <h2>从模型实验到小程序发布的全链路能力</h2>
+  </div>
+  <div class="skill-grid">
+    {% for group in profile.skills %}
+    <article class="glass-panel skill-card reveal tilt-card">
+      <h3>{{ group[1].title }}</h3>
+      <div class="tag-list">
+        {% for item in group[1].items %}
+        <span>{{ item }}</span>
+        {% endfor %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Projects</span>
+    <h2>课程实验与项目开发中的代表作品</h2>
+  </div>
+  <div class="project-grid">
+    {% for project in profile.projects %}
+    <article class="project-card glass-panel reveal tilt-card">
+      <div class="project-img-placeholder" style="background: linear-gradient(135deg, rgba(116,215,238,0.18), rgba(142,125,240,0.22));">
+        <span>{{ project.title | slice: 0 }}</span>
+      </div>
+      <div class="project-body">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.summary }}</p>
+        <div class="tag-list compact">
+          {% for tag in project.tags %}
+          <span>{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="contact" class="section contact-section">
+  <div class="glass-panel contact-card reveal">
+    <span class="eyebrow">Contact</span>
+    <h2>一起把想法做成作品</h2>
+    <p>欢迎围绕微信小程序开发、数据挖掘、机器学习、Flutter跨平台应用与Python自动化交流合作。</p>
+    <div class="contact-links">
+      <a href="mailto:{{ profile.contact.email }}">{{ profile.contact.email }}</a>
+      <a href="{{ profile.contact.github }}" target="_blank" rel="noreferrer">github.com/luckFan0519</a>
+    </div>
+  </div>
+</section>

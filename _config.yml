@@ -1,18 +1,24 @@
-# Jekyll site settings
-title: "江帆的个人主页"
-description: "信息学院 | 创新实验"
+title: "江帆 | Developer Portfolio"
+email: luckFan0519@users.noreply.github.com
+description: "信息学院在读学生，关注微信小程序开发、数据挖掘与机器学习、Flutter跨平台应用与Python自动化。"
 baseurl: ""
 url: "https://luckFan0519.github.io"
-theme: minima
+github_username: luckFan0519
+lang: zh-CN
+timezone: Asia/Shanghai
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
 markdown: kramdown
+kramdown:
+  input: GFM
 
-# Navigation
-header_pages:
-  - skills.md
-  - projects.md
-  - about.md
-
-# Author info
-author:
-  name: 江帆
-  email: luckFan0519@users.noreply.github.com
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
