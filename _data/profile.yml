@@ -1,38 +1,41 @@
-name: "江帆"
+name: "姜凡"
 nickname: "luckFan0519"
-role: "Student Developer / WeChat Mini Program & AI Explorer"
+role: "Student Developer / Medical Image Segmentation & Image Restoration"
 school: "信息学院"
 slogan: "把学到的技术，做成能跑能用的作品。"
-bio: "我是信息学院的一名在读学生，长期关注微信小程序开发、数据挖掘与机器学习、Flutter跨平台应用与Python自动化。我的工作习惯是从实际需求出发，把学到的算法和工具变成真正能运行、能展示的项目：既关心技术原理是否理解，也关心代码是否跑得通、效果是否看得见。"
+bio: "我是信息学院的一名在读学生，长期关注3D医学图像分割、图像去雾与复原、微信小程序开发。我的工作习惯是从实际需求出发，把学到的算法和工具变成真正能运行、能展示的项目：既关心技术原理是否理解，也关心代码是否跑得通、效果是否看得见。"
 interests:
+  - 3D医学图像分割
+  - 图像去雾与复原
   - 微信小程序云开发
   - 数据挖掘与机器学习
-  - Flutter跨平台开发
   - Python自动化工具
-  - Jekyll静态网站构建
 skills:
   languages:
     title: "Programming"
     items: ["Python", "JavaScript", "Java", "C/C++", "Dart"]
   ai:
-    title: "AI / Data"
-    items: ["PyTorch", "scikit-learn", "K-Means", "Apriori", "MNIST"]
+    title: "AI / Research"
+    items: ["PyTorch", "UNETR++", "Image Dehazing", "Medical Segmentation", "CUDA"]
   engineering:
     title: "Engineering"
     items: ["微信小程序", "Jekyll", "Git", "GitHub Pages", "Cloud Development"]
 projects:
+  - title: "改进UNETR++的3D医学图像分割"
+    tags: ["3D分割", "UNETR++", "Transformer", "医学图像", "Synapse数据集"]
+    image: "/assets/images/avatar.jpg"
+    summary: "提出Skip-Conv Refinement(SCR)和Position-Pre-fusion Strategy(PPS)两种轻量级改进，在Synapse数据集Dice达87.94%，超过原始UNETR++ 0.72%，仅增加0.54M参数。发表于云南大学信息学院。"
+    link: "https://github.com/luckFan0519/UNETRpp-SCR-PPS"
+  - title: "SLRNet实时图像去雾网络"
+    tags: ["图像去雾", "轻量网络", "实时推理", "残差学习", "SOTS"]
+    image: "/assets/images/avatar.jpg"
+    summary: "提出Super Lightweight Residual Network(SLRNet)，引入Adaptive Feature Unit(AFU)自适应特征单元。SOTS-outdoor上PSNR 28.78dB、SSIM 0.9645，推理仅1.44ms/图，达到轻量模型SOTA效率-精度平衡。"
+    link: "https://github.com/Unk1ndledAC/SLRNet"
   - title: "家具展示微信小程序 (hanjfv1.0)"
     tags: ["微信云开发", "云函数", "云存储", "小程序UI"]
-    image: "/assets/images/project-furniture.svg"
-    summary: "基于微信云开发的家具展示平台，包含首页展示、产品详情、收藏管理、搜索与在线客服五大模块。实现云函数级联删除、产品唯一标识校验、云存储文件实时清理等核心功能，完成云南备案流程。"
-  - title: "PyTorch 手写数字识别实验"
-    tags: ["PyTorch", "CUDA 12.4", "MNIST", "前馈神经网络"]
-    image: "/assets/images/project-mnist.svg"
-    summary: "在 RTX 4060 Laptop 上搭建 PyTorch 2.4.1 + CUDA 12.4 深度学习环境，实现 MNIST 手写数字识别前馈神经网络，完成模型训练、评估与实验报告撰写。"
-  - title: "数据挖掘实验：聚类与关联规则"
-    tags: ["scikit-learn", "K-Means", "Apriori", "Groceries数据集"]
-    image: "/assets/images/project-datamining.svg"
-    summary: "完成 Iris 数据集 K-Means 聚类分析与 Groceries 购物篮数据集 Apriori 关联规则挖掘，挖掘蔬菜类与乳制品间的关联模式，使用 Python + scikit-learn + mlxtend 实现。"
+    image: "/assets/images/avatar.jpg"
+    summary: "基于微信云开发的家具展示平台，包含首页展示、产品详情、收藏管理、搜索与在线客服五大模块。实现云函数级联删除、产品唯一标识校验、云存储文件实时清理等核心功能。"
+    link: ""
 contact:
   email: "luckFan0519@users.noreply.github.com"
   github: "https://github.com/luckFan0519"
